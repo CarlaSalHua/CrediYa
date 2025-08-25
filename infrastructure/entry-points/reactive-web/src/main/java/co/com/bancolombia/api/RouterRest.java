@@ -1,6 +1,5 @@
 package co.com.bancolombia.api;
 
-import co.com.bancolombia.api.config.UserPath;
 import co.com.bancolombia.api.dto.UserDTO;
 import co.com.bancolombia.model.user.User;
 import io.swagger.v3.oas.annotations.Operation;
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.ServerResponse;
 
-import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
 import static org.springframework.web.reactive.function.server.RequestPredicates.POST;
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
 

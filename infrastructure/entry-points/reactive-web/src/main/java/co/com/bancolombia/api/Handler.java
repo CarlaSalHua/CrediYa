@@ -4,6 +4,7 @@ import co.com.bancolombia.api.dto.UserDTO;
 import co.com.bancolombia.api.mapper.UserMapper;
 import co.com.bancolombia.model.user.User;
 import co.com.bancolombia.usecase.registeruser.RegisterUserUseCase;
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
@@ -14,8 +15,6 @@ import reactor.core.publisher.Mono;
 @Component
 @RequiredArgsConstructor
 public class Handler {
-//private  final UseCase useCase;
-
     private  final RegisterUserUseCase registerUserUseCase;
     private final UserMapper userMapper;
 
@@ -29,13 +28,8 @@ public class Handler {
                     .bodyValue(savedUser));
     }
 
-    public Mono<ServerResponse> listenGETOtherUseCase(ServerRequest serverRequest) {
-        // useCase2.logic();
-        return ServerResponse.ok().bodyValue("");
-    }
-
-    public Mono<ServerResponse> listenPOSTUseCase(ServerRequest serverRequest) {
-        // useCase.logic();
-        return ServerResponse.ok().bodyValue("");
+    //metodos
+    public  Mono<User> safeUser(@RequestBody(description = "userDTO") UserDTO userDTO) {
+        return Mono.empty();
     }
 }

@@ -1,10 +1,12 @@
 package co.com.bancolombia.api.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import jakarta.validation.constraints.*;
 import java.time.LocalDate;
 
 @Data
+@Schema(name = "userDTO")
 public class UserDTO {
     private String id;
 
